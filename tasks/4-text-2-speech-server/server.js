@@ -17,7 +17,14 @@ app.get('/tts', function(req, res){
         
         var query=(req.query)
         var q=req.query.q
-        var id=req.query.id
+        var id="test"
+        try{
+          id=req.query.id
+        }
+        catch{
+          id="test"
+        }
+        
         res.send('query: ' +q+id);
         const executor = await TaskExecutor.create("b4cb575a2010a0ca37a9ea555d8384ea20af6a81580aa6469339ab1f");
         await executor.run(async (ctx) => {
