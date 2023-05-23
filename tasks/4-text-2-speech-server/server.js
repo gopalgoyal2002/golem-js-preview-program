@@ -18,11 +18,9 @@ app.get('/tts', function(req, res){
         var query=(req.query)
         var q=req.query.q
         var id="test"
-        try{
-          id=req.query.id
-        }
-        catch{
-          id="test"
+        if(req.query.id)
+        {
+          id=req.query.id;
         }
         
         res.send('query: ' +q+id);
