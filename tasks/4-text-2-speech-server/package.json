@@ -1,0 +1,17 @@
+{
+  "name": "text-2-speech",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A script that uses Golem to generate text-to-speech audio",
+  "scripts": {
+    "start": "nodemon server.js",
+    "tts": "node main.mjs"
+  },
+  "author": "Golem Factory GmbH",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22",
+    "yajsapi": "^0.7.0-alpha.0"
+  }
+}
